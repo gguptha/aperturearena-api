@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: local
+---
+server:
+  port: 8080
+  error:
+    include-stacktrace: never
+spring:
+  application:
+    name: paperflow-api
+  jackson:
+    default-property-inclusion: non_null
+  endpoint:
+    health:
+      show-details: always
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    open-in-view: false
+  mvc:
+    problemdetails:
+      enabled: true

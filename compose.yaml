@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=paperflow'
+      - 'MYSQL_PASSWORD=dn47gh3y'
+      - 'MYSQL_ROOT_PASSWORD=Test@123'
+      - 'MYSQL_USER=paperflow'
+    ports:
+      - '3306:3306'
