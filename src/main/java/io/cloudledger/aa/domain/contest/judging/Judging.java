@@ -1,4 +1,4 @@
-package io.cloudledger.aa.domain.contest;
+package io.cloudledger.aa.domain.contest.judging;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

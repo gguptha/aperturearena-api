@@ -18,6 +18,10 @@ spring:
     allow-bean-definition-overriding: true
   jpa:
     open-in-view: false
+#    hibernate:
+#      naming:
+#        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   mvc:
     problemdetails:
       enabled: true

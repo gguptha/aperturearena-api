@@ -1,4 +1,4 @@
-package io.cloudledger.aa.domain.contest;
+package io.cloudledger.aa.domain.contest.judging;
 
 public enum JudgingType {
 

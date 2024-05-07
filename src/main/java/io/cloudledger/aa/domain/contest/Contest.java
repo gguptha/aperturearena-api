@@ -1,5 +1,7 @@
 package io.cloudledger.aa.domain.contest;
 
+import io.cloudledger.aa.domain.contest.judging.Judging;
+import io.cloudledger.aa.domain.contest.section.Section;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.JdbcTypeCode;
@@ -7,6 +9,7 @@ import org.hibernate.type.SqlTypes;
 import org.springframework.hateoas.server.core.Relation;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -16,8 +19,8 @@ import java.util.UUID;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Contest {
-
+public class Contest
+{
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @JdbcTypeCode(SqlTypes.VARCHAR)
@@ -45,4 +48,7 @@ public class Contest {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Judging judging;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Section> sections;
 }
